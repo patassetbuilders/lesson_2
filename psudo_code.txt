@@ -1,0 +1,66 @@
+1 a method that returns the sum of two integers
+===============================================
+
+Assumption - the method willbe used by other code that get variables
+
+set up method definition
+check that input are integers
+add integers
+end method definition
+
+START
+define method constructor
+add integers
+PINIT INTEGERS
+end method constructor
+END
+
+
+
+2 write a method that takes an array of strings and returns a string concatenated together
+==========================================================================================
+Assumption - the method willbe used by other code that gives it the code
+
+set up method definition
+set up empty string variable 
+get the first element of the array
+assign the first value to the string
+get the next value
+concatenate the new value to to the variable
+repeat the process until there are no more elements
+print the result  
+
+START
+SETUp method definition
+SET counter variable to length of the array - 1
+SET empty string variable
+ASSIGN valie to first element to string variable
+SET UP WHILE LOOP 
+  While current index is less than counter
+  READ next variable
+  concatenate this variable to string variable
+  end loop
+READ final string variable
+END  method definition
+
+
+2 write a method that takes returns a new array with every other element
+==========================================================================================
+Assumption - the method willbe used by other code that gives it the code
+
+Setup method definition
+set up empty array
+for each elemet of the array
+ chech the index if it is odd then add this element to the new array
+ if the index is even do nothing
+return new array
+
+START
+SET method definition  (input array)
+SET empty array
+for eact element of the array check the index
+IF index is odd then add the element to the new array
+PRINT new array 
+
+
+

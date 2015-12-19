@@ -1,0 +1,21 @@
+# calculator_messages.yml
+en:
+  welcome: "Welcome to Calculator!"
+  enter_name: "Please enter your name"
+  valid_name: "Make sure to end a valid name."
+  first_number: "Enter your first number"
+  second_number: "Enter your second number"
+  error_message1: "That does not look like a number...Please enet a valid number"
+  operator_error: 'Please enter a valid option 1 2 3 or 4'
+
+es:
+  welcome: "Welcome to Calculator! in Spanish"
+  enter_name: "Please enter your name in spanis"
+  valid_name: "Make sure to end a valid name in spanish."
+  first_number: "Enter your first number in spanish"
+  second_number: "Enter your second number in spanish"
+  error_message1: "That does not look like a number...Please enet a valid number in spanish"
+  operator_error: 'Please enter a valid option 1 2 3 or 4 in spanish'
+
+
+# ... rest of file omitted for brevity
