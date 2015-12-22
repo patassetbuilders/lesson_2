@@ -4,7 +4,7 @@
 
 # test_message --- does not work undefined method prompt for main object
 
-require 'pry'
+ #require 'pry'
 
 def prompt(message)
   Kernel.puts "=> #{message}"
@@ -18,26 +18,26 @@ display_valid_choices = VALID_CHOICE.join(', ')
 prompt("Play  #{display_valid_choices} == Winner is first to five ==")
 
 def player_wins?(player, computer)
-  player == 'scissor' && computer == ('paper' || 'lizard' || !'rock' || !'spock') ||
-    player == 'paper' && computer ==  ('rock' || 'spock' ||  !'lizard' || !'scissor') ||
-    player == 'rock' && computer == ('scissor' || 'lizard' || !'paper' || !'spock') ||
-    player == 'lizard' && computer == ('spock' || 'paper' || !'rock' || 'scissor') ||   
-    player == 'spock' && computer == ('scissor' || 'rock' || !'paper' || !'lizard')  
+  player == 'scissor' && %w(paper lizard).include?(computer) ||
+    player == 'paper' && %w(rock spock).include?(computer) ||
+    player == 'rock' && %w(scissors lizard).include?(computer) ||
+    player == 'lizard' && %w(spock paper).include?(computer) ||
+    player == 'spock' && %w(scissors rock).include?(computer)
 end
 
-loop do # main loop
-  
+loop do # play again loop
+
   your_score = 0
   computer_score = 0
- 
-  loop do #best of five
+
+  loop do # best of five loop
     if your_score == 5
       prompt("Congratulations YOU WIN #{your_score} to #{computer_score}")
       break
     elsif computer_score == 5
       prompt("COMPUTER WINs  #{computer_score} to  #{your_score} ")
       break
-    end   
+    end
 
     your_choice = ''
     loop do
@@ -63,7 +63,6 @@ loop do # main loop
       prompt('COMPUTER wins this round')
       computer_score += 1
     end
-
   end
 
   prompt('Would you like to play again?')
