@@ -50,7 +50,7 @@ loop do
   #look at removing , eg 45,000 = 45000
   if valid_number?(loan_amount)
     loan_amount = loan_amount.to_f
-    prompt("Loan amount is #{loan_amount} dollars")
+    prompt("Loan amount is #{loan_amount.to_i} dollars")
     break
   else
     prompt('That does not look like a number, enter the loan amount')
@@ -74,7 +74,7 @@ operator_prompt = <<-MSG
  Enter the loan duration in years.months 
        12.0 for 12 years
        12.04 for 12 years and 4 months
-       0.60 for 60 months
+       0.6 for 60 months
  MSG
 load_duration = 0
 loan_duration_months = 0
@@ -83,7 +83,7 @@ loop do
   loan_duration = Kernel.gets().chomp()
   if valid_number?(loan_duration)
     loan_duration_months = loan_duration_to_months(loan_duration)
-    prompt("Loan duration is #{loan_duration_months} months")
+    prompt("Loan duration is #{loan_duration_months.to_i} months")
     break
   else
     prompt('That does not look like a valid loan duration')
@@ -92,5 +92,5 @@ end
 
 repayments = fixed_monthly_payment(loan_amount,
  loan_duration_months, monthly_interest_rate)
-prompt("Repayment amount is #{repayments.to_i} per month")
+prompt("Repayment amount is $#{repayments.to_i} per month")
  
